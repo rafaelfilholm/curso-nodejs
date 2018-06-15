@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/rafaelfilholm/curso-nodejs/issues"
   },
-  "homepage": "https://github.com/rafaelfilholm/curso-nodejs#readme"
+  "homepage": "https://github.com/rafaelfilholm/curso-nodejs#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
