@@ -3,8 +3,11 @@ const app = express();
 
 const port = process.env.PORT || 3000;
 
-app.get('/technology', (req, res)=> res.send("Notícias de Tecnologia"));
-app.get('/games', (req, res)=> res.send("Notícias de Games"));
-app.get('*', (req, res)=> res.send("Portal de notícias"));
+/* Settings of server */
+app.set("view engine", "ejs");
+
+app.get('/', (req, res)=> res.render("home/index"));
+app.get('/notices', (req, res)=> res.render("notices/notices"));
+app.get('/insert-notice', (req, res)=> res.render("admin/insert-notice"));
 
 app.listen(port, ()=> console.log(`Server started at port ${port}`));
